@@ -4,6 +4,12 @@
 
 ```sh
 git clone https://github.com/imshibaji/realestate-agent.git
+
+cd realestate-agent
+
+npm install
+
+npm run dev
 ```
 
 
