@@ -7,9 +7,9 @@ import Typography from '@mui/material/Typography';
 
 export default function MediaCard({image, title, description} : {image: string, title: string, description: string}) {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card className='w-full'>
             <CardMedia
-                sx={{ height: 140 , objectFit: 'contain' }}
+                className='aspect-3/2 object-cover'
                 image={image}
                 title={title}
             />

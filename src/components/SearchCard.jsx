@@ -9,23 +9,21 @@ import Box from "@mui/material/Box";
 export default function SearchCard() {
   return (
     // Use a Tailwind wrapper to control spacing/positioning.
-    <div className="mx-auto max-w-4xl -mt-5 px-4">
-      <Paper elevation={4} square={false} className="p-4">
-        <h2 className="text-2xl font-semibold mb-4">Search Property</h2>
+    <div className="mx-auto max-w-7xl -mt-5 px-4">
+      <Paper elevation={4} className="p-4 !rounded-2xl">
+        <h2 className="text-2xl font-semibold mb-4 text-center">Search Property</h2>
 
         <Box
           component="form"
           noValidate
           autoComplete="off"
           // Keep MUI sx for internal layout if desired. Avoid mixing too many Tailwind classes on MUI internals.
-          sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}
+          className="flex w-full gap-3"
         >
-          <TextField required id="location" label="Location" sx={{ minWidth: 160 }} />
-          <TextField id="minPrice" label="Min Price" sx={{ minWidth: 160 }} />
-          <TextField id="maxPrice" label="Max Price" sx={{ minWidth: 160 }} />
-          <div className="w-full mt-4 flex justify-end">
-            <Button variant="contained" type="submit">Search</Button>
-          </div>
+          <TextField required id="location" label="Location" className="w-full" />
+          <TextField id="minPrice" label="Min Price" className="w-full" />
+          <TextField id="maxPrice" label="Max Price" className="w-full" />
+          <Button className="w-80" variant="contained" type="submit">Search</Button>
         </Box>
       </Paper>
     </div>
