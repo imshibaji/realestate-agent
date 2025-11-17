@@ -5,6 +5,11 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
+/**
+ * 
+ * @param param0 
+ * @returns 
+ */
 export default function MediaCard({image, title, description} : {image: string, title: string, description: string}) {
     return (
         <Card className='w-full'>
