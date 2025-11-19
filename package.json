@@ -14,7 +14,6 @@
     "pltest:ci": "playwright test --update-snapshots",
     "pltest:headed": "playwright test --headed",
     "pltest:report": "playwright show-report"
-
   },
   "dependencies": {
     "@astrojs/react": "^4.4.1",
@@ -27,8 +26,10 @@
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "astro": "^5.15.3",
+    "framer-motion": "^12.23.24",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-hook-form": "^7.66.1",
     "tailwindcss": "^4.1.16"
   },
   "devDependencies": {
