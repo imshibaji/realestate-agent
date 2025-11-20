@@ -1,0 +1,25 @@
+---
+// login.astro
+import Layout from "../layouts/Layout.astro";
+import AuthForm from "../components/AuthForm.jsx";
+---
+
+<Layout>
+  <div
+    class="min-h-[calc(100vh-70px)] flex justify-center items-center bg-gradient-to-r from-sky-500 to-indigo-500"
+  >
+    <div class="bg-gray-200 w-full max-w-4xl flex overflow-hidden rounded-2xl">
+      <!-- image section -->
+      <div class="hidden md:block w-1/2 p-4 rounded-2xl">
+        <img
+          src="/login.jpg"
+          alt="login image"
+          class="w-full h-full object-cover rounded-2xl"
+        />
+      </div>
+
+      <!-- form section -->
+      <AuthForm client:load />
+    </div>
+  </div>
+</Layout>

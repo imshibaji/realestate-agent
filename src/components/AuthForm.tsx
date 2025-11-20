@@ -1,13 +1,17 @@
 import React from "react";
-import { useForm } from "react-hook-form";
+import { useForm, type SubmitHandler } from "react-hook-form";
 import { motion } from "framer-motion";
 
-export default function AuthForm() {
-  const { register, handleSubmit } = useForm();
+interface IFormInput {
+  email: string;
+  password: string;
+}
 
-  const onSubmit = (data) => {
-    console.log("submit", data);
-    // call your API here
+export default function AuthForm() {
+  const { register, handleSubmit } = useForm<IFormInput>();
+
+  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+    window.location.href = "/";
   };
 
   return (
@@ -22,8 +26,9 @@ export default function AuthForm() {
 
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <div>
-            <label className="block text-xs mb-1">Email</label>
+            <label className="block text-xs mb-1" htmlFor="email">Email</label>
             <input
+              id='email'
               {...register("email")}
               required
               className="w-full bg-transparent border border-zinc-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -31,8 +36,9 @@ export default function AuthForm() {
           </div>
 
           <div>
-            <label className="block text-xs mb-1">Password</label>
+            <label className="block text-xs mb-1" htmlFor="password">Password</label>
             <input
+              id="password"
               {...register("password")}
               type="password"
               required
