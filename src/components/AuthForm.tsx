@@ -10,8 +10,16 @@ interface IFormInput {
 export default function AuthForm() {
   const { register, handleSubmit } = useForm<IFormInput>();
 
-  const onSubmit: SubmitHandler<IFormInput> = (data) => {
-    window.location.href = "/";
+  const onSubmit: SubmitHandler<IFormInput> = async (data) => {
+    await fetch("/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((response) => response.json()).finally(() => {
+      window.location.href = "/";
+    });
   };
 
   return (
