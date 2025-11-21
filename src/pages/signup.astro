@@ -1,20 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-
+import SignupForm from "../components/SignupForm"
 ---
 
 <Layout>
-    <div class="min-h-[calc(100vh-70px)] bg-gradient-to-r from-sky-500 to-indigo-500 flex items-center justify-center">
-        <div class="w-full max-w-4xl md:w-[70%] bg-white rounded-2xl">
-            <div class="hidden md:block w-1/2 p-4">
-                <img src="/login.jpg" alt="signup" class="w-full h-full object-cover"/>
-            </div>
+  <div
+    class="min-h-[calc(100vh-70px)] bg-gradient-to-r from-sky-500 to-indigo-500 flex items-center justify-center"
+  >
+    <div
+      class="w-full max-w-4xl md:w-[70%] bg-white rounded-2xl flex justify-center items-center shadow-xl"
+    >
+      <div class="hidden md:block w-1/2 p-4">
+        <img
+          src="/signin.jpg"
+          alt="signup"
+          class="w-full h-full object-cover"
+        />
+      </div>
 
-            <div class="w-1/2">
-                
-            </div>
-        </div>
+      <SignupForm client:load />
 
     </div>
+  </div>
 </Layout>
