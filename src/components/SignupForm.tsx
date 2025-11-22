@@ -1,6 +1,13 @@
 import { Box } from '@mui/material'
 
 function SignupForm() {
+
+    const handleSubmit = () => {
+        console.log("handleSubmit clicked");
+        
+        window.location.href = "/login";
+    }
+
     return (
         <>
             <div className="w-full md:w-1/2">
@@ -26,7 +33,7 @@ function SignupForm() {
                             <a href="/login" className="font-semibold text-blue-500">Sign in</a>
                         </p>
                     </div>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div className="space-y-4">
                             <div>
                                 <label
